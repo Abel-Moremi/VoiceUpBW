@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from voiceupprofile import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.frontpage, name='frontpage'),
+    path('<str:username>/', views.profile, name="profile"),
 ]
