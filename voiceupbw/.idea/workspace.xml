@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a866acb-cbf9-4ab0-a97e-3b4c3a0d9126" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/frontpage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/voiceUpPost/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/voiceUpPost/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/voiceUpPost/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/voiceupprofile/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/voiceupprofile/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/voiceupprofile/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voiceupbw/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/voiceupbw/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voiceupbw/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/voiceupbw/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voiceupbw/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/voiceupbw/urls.py" afterDir="false" />
-    </list>
+    <list default="true" id="3a866acb-cbf9-4ab0-a97e-3b4c3a0d9126" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,10 +13,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/voiceupprofile/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
+            <state relative-caret-position="255">
               <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
@@ -68,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/voiceupbw/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -238,12 +224,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1557429812175</updated>
-      <workItem from="1557429813575" duration="10603000" />
+      <workItem from="1557429813575" duration="10845000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10603000" />
+    <option name="totallyTimeSpent" value="10845000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="756" y="0" width="1171" height="1047" extended-state="0" />
@@ -341,9 +327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/voiceUpPost/views.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/voiceupprofile/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -357,22 +340,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/voiceupprofile/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/voiceUpPost/views.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/voiceupbw/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#633#665#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/voiceupprofile/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
