@@ -1,2 +1,2 @@
 # VoiceUpBW
-A little tweeter like clone but for politicians to communicate with their constituents around politics
+A tweeter like clone to facilitate communication between Politicians and their constituents around politics
