@@ -1,9 +1,4 @@
-from django.shortcuts import render
-
-# Create your views here.
-
-# Import django and models
-
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import User
@@ -31,8 +26,6 @@ def profile(request, username):
         else:
             form = VoiceUpPostForm()
 
-
-
         return render(request, 'profile.html', {'form': form, 'user': user})
     else:
         return redirect('/')
@@ -58,8 +51,8 @@ def frontpage(request):
                 signinform = SigninForm(data=request.POST)
                 signupform = SignupForm()
 
-                if signupform.is_valid():
-                    login(request, signupform.get_user())
+                if signinform.is_valid():
+                    login(request, signinform.get_user())
                     return redirect('/')
         else:
             signupform = SignupForm()
@@ -73,6 +66,31 @@ def signout(request):
     return redirect('/')
 
 
-def profiles(request, username):
+def follows(request, username):
     user = User.objects.get(username=username)
-    return render(request, 'profile.html', {'user': user})
+    profiles = user.voiceupprofile.follows.all()
+
+    return render(request, 'users.html', {'title': 'Follows', 'profiles': profiles})
+
+
+def followers(request, username):
+    user = User.objects.get(username=username)
+    profiles = user.voiceupprofile.followed_by.all()
+
+    return render(request, 'users.html', {'title': 'Followers', 'profiles': profiles})
+
+
+@login_required
+def follow(request, username):
+    user = User.objects.get(username=username)
+    request.user.voiceupprofile.follows.add(user.voiceupprofile)
+
+    return redirect('/' + user.username + '/')
+
+
+@login_required
+def stopfollow(request, username):
+    user = User.objects.get(username=username)
+    request.user.voiceupprofile.follows.delete(user.voiceupprofile)
+
+    return redirect('/' + user.username + '/')

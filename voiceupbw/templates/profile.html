@@ -6,7 +6,24 @@
       <div class="col-9">
         <h3>@{{ user.username }}</h3>
 
-        {% if user.djeets.all %}
+          <hr>
+
+        <b><a href="/{{ user.username }}/follows/">Follows:</a></b> {{ user.voiceupprofile.follows.count }}
+        <b><a href="/{{ user.username }}/followers/">Followers:</a></b> {{ user.voiceupprofile.followed_by.count }}
+
+
+        {% ifnotequal request.user user %}
+          <hr>
+          {% if request.user.voiceupprofile in user.voiceupprofile.followed_by.all %}
+            <a href="/{{ user.username }}/stopfollow/" class="btn btn-danger">Stop follow</a>
+          {% else %}
+            <a href="/{{ user.username }}/follow/" class="btn btn-success">Follow</a>
+          {% endif %}
+        {% endifnotequal %}
+
+        <hr>
+
+        {% if user.voiceuppost.all %}
           {% for post in user.voiceuppost.all %}
             <div class="card" style="margin-bottom: 20px;">
               <div class="card-body">
@@ -20,6 +37,7 @@
         {% endif %}
       </div>
 
+        {% ifequal request.user user %}
       <!-- Sidebar -->
       <div class="col-3">
         <h3>Add Post</h3>
@@ -38,6 +56,7 @@
             {% endfor %}
         {% endif %}
 
+
         <form action="/{{ request.user.username }}/" method="post">
             {% csrf_token %}
 
@@ -50,6 +69,7 @@
             <input type="hidden" value="{{ request.path }}" name="redirect">
             <input type="submit" value="Post" class="btn btn-primary">
         </form>
+      {% endifequal %}
       </div>
     </div>
 {% endblock %}

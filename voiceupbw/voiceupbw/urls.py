@@ -16,9 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from voiceupprofile import views
+from voiceUpPost.views import feed
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.frontpage, name='frontpage'),
+    path('feed/', feed, name='feed'),
+    path('signout/', views.signout, name='signout'),
+    path('<str:username>/follows/', views.follows, name='follows'),
+    path('<str:username>/followers/', views.followers, name='following'),
+    path('<str:username>/follow/', views.follow, name='follow'),
+    path('<str:username>/stopfollow/', views.stopfollow, name='stopfollow'),
     path('<str:username>/', views.profile, name="profile"),
 ]
