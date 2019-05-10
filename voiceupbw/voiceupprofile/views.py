@@ -7,7 +7,7 @@ from voiceUpPost.forms import VoiceUpPostForm
 
 
 # Views
-
+@login_required
 def profile(request, username):
     if request.user.is_authenticated:
         user = User.objects.get(username=username)
@@ -61,11 +61,13 @@ def frontpage(request):
         return render(request, 'frontpage.html', {'signupform': signupform, 'signinform': signinform})
 
 
+@login_required
 def signout(request):
     logout(request)
     return redirect('/')
 
 
+@login_required
 def follows(request, username):
     user = User.objects.get(username=username)
     profiles = user.voiceupprofile.follows.all()
@@ -73,6 +75,7 @@ def follows(request, username):
     return render(request, 'users.html', {'title': 'Follows', 'profiles': profiles})
 
 
+@login_required
 def followers(request, username):
     user = User.objects.get(username=username)
     profiles = user.voiceupprofile.followed_by.all()
@@ -91,6 +94,6 @@ def follow(request, username):
 @login_required
 def stopfollow(request, username):
     user = User.objects.get(username=username)
-    request.user.voiceupprofile.follows.delete(user.voiceupprofile)
+    request.user.voiceupprofile.follows.remove(user.voiceupprofile)
 
     return redirect('/' + user.username + '/')

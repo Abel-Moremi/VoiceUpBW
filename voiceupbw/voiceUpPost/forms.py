@@ -1,7 +1,6 @@
 # Import django forms and models
 
 from django import forms
-from django.utils.html import strip_tags
 from .models import VoiceUpPost
 
 
