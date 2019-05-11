@@ -11,3 +11,18 @@ class VoiceUpPost(models.Model):
 
     class Meta:
         ordering = ('-created_at',)
+
+
+class Comment(models.Model):
+    post = models.ForeignKey(VoiceUpPost, related_name='comments', on_delete=models.CASCADE)
+    user = models.CharField(max_length=250)
+    body = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+    def approved(self):
+        self.approved = True
+        self.save()
+
+    def __Str__(self):
+        return self.user

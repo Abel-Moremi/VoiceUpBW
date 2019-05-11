@@ -1,7 +1,7 @@
 # Import django forms and models
 
 from django import forms
-from .models import VoiceUpPost
+from .models import VoiceUpPost, Comment
 
 
 class VoiceUpPostForm(forms.ModelForm):
@@ -11,3 +11,10 @@ class VoiceUpPostForm(forms.ModelForm):
     class Meta:
         model = VoiceUpPost
         exclude = ('user',)
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('user', 'body',)
+
